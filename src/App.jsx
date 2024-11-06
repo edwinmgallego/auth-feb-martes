@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Login from "./routes/Login";
 import Home from "./routes/Home";
-import Register from "./components/Register";
+import Register from "./routes/Register";
 import RequireAuth from "./components/RequireAuth";
 import { UserContext } from "./context/UserProvider";
 import "./App.css";
@@ -28,9 +28,11 @@ function App() {
               <Home />
             </RequireAuth>
           }
-        ></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
+        />
+
+       
+        <Route path="/login" element={<Login />}/>
+        <Route path="/register" element={<Register />}/>
       </Routes>
     </>
   );
