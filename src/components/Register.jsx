@@ -12,6 +12,7 @@ const Register = () =>
         console.log("enviando datos-->", email, password)
         try {
             await registerUser(email,password)
+            console.log("usuario registrado-->", email, password)
         } catch (error) {
             console.log(error.code);
             
